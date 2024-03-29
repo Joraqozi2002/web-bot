@@ -1,0 +1,34 @@
+:root {
+	--button-color: #fff;
+	--button-background-color: #007bff;
+	--button-border-color: #007bff;
+	--button-border-radius: 4px;
+	--button-font-size: 16px;
+	--button-padding: 10px 20px;
+	--button-hover-color: #fff;
+	--button-hover-background-color: #0056b3;
+	--button-hover-border-color: #004394;
+	--primary-color: #007bff;
+}
+.btn {
+	color: var(--button-color);
+	background-color: var(--button-background-color);
+	border-color: var(--button-border-color);
+	border-radius: var(--button-border-radius);
+	font-size: var(--button-font-size);
+	padding: var(--button-padding);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.btn.add {
+	background-color: #28a745;
+	border-color: #28a745;
+}
+.btn.remove {
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+.btn.checkout {
+	background-color: #007bff;
+	border-color: #007bff;
+}

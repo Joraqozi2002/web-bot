@@ -1,0 +1,61 @@
+.card {
+	width: 350px;
+	background-color: #2d3748;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 13px 10px;
+	color: #fff;
+	border-radius: 5px;
+	position: relative;
+}
+.card_badge {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #f56565;
+	color: #fff;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate(20px -20px) scale(1);
+	transition: all 0.3s ease-in-out;
+	font-size: 20px;
+	font-weight: bold;
+	animation: scaleanimation 0.5s infinite;
+	opacity: 0.8;
+}
+.card_badge_hidden {
+	display: none;
+}
+@keyframes scaleanimation {
+	to {
+		transform: translate(20px -20px) scale(1.05);
+		opacity: 1;
+	}
+}
+.card_body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card_title {
+	font-size: 20px;
+	font-weight: 400;
+}
+.card_price {
+	font-size: 20px;
+	font-weight: bold;
+}
+.btn_container {
+	display: flex;
+	justify-content: space-between;
+}

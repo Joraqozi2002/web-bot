@@ -43,8 +43,7 @@ function App() {
         body: JSON.stringify(cardItems),
       })
     } else {
-
-      telegram.sendData(JSON.stringify(cardItems))
+      telegram.sendData(JSON.stringify({ products: cardItems, queryId: queryId }))
     }
   }
     , [cardItems])

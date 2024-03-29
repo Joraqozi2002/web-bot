@@ -10,8 +10,7 @@ function App() {
   const [cardItems, setcardItems] = useState([])
   useEffect(() => {
     telegram.ready()
-  }
-  )
+  })
   const onAddItem = (item) => {
     const existItem = cardItems.find((x) => x.id === item.id)
     if (existItem) {
@@ -38,7 +37,7 @@ function App() {
   }
     , [cardItems])
   useEffect(() => {
-    telegram.onEvet("mainButtonClicked", onSendData);
+    telegram.onEvent("mainButtonClicked", onSendData);
     return () => {
       telegram.offEvent("mainButtonClicked", onSendData);
     }

@@ -33,7 +33,19 @@ function App() {
     telegram.MainButton.show();
   }
   const onSendData = useCallback(() => {
-    telegram.sendData(JSON.stringify(cardItems))
+    const queryId = telegram.initialDataUnsave?.query_id;
+    if (queryId) {
+      fetch("http:localhost:8080/web-data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cardItems),
+      })
+    } else {
+
+      telegram.sendData(JSON.stringify(cardItems))
+    }
   }
     , [cardItems])
   useEffect(() => {
